@@ -50,9 +50,10 @@
                     url: "/Doge/FeedDoge?dogid=" + dogId,
                     data: null,
                     success: function () {
-                        alert("success");
                     }
                 });
+
+                return false;
             });
 
             $(".costs .feed").hover(
