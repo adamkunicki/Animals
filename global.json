@@ -1,8 +1,15 @@
 {
-    "projects": [ "src", "test" ],
+    "projects": [
+        "src",
+        "test",
+        "wrap"
+    ],
     "sdk": {
         "version": "1.0.0-beta5",
-        "runtime": "coreclr",
-        "architecture": "x64"
-    }
+        "runtime": "clr",
+        "architecture": "x86"
+    },
+    "sources": [
+        "wrap\\"
+    ]
 }

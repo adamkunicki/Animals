@@ -12,6 +12,7 @@ using Microsoft.Framework.DependencyInjection;
 using Microsoft.Framework.Logging;
 using Microsoft.Framework.Logging.Console;
 using Microsoft.Framework.Runtime;
+using Animal.Db;
 
 namespace AnimalWeb
 {
@@ -31,6 +32,7 @@ namespace AnimalWeb
         // This method gets called by the runtime.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped(typeof(AnimalModel), typeof(AnimalModel));
             // Add MVC services to the services container.
             services.AddMvc();
             // Uncomment the following line to add Web API services which makes it easier to port Web API 2 controllers.
