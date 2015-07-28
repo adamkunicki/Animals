@@ -17,13 +17,19 @@
 
         @foreach (var row in this.Model)
         {
+            var sadImg = string.Format("/images/dogs/{0}_2.png", row.Name);
+            var happyImg = string.Format("/images/dogs/{0}_1.png", row.Name);
+
             <text>
             <div class="col-md-4 costs">
-                <div data-stellar-ratio="1.2" data-stellar-vertical-offset="150" data-stellar-horizontal-offset="0" style="top: auto;">
-                    <img src="~/images/dogs/@row.SadImg" alt="@row.Name">
+                <div>
+                    <span class="sponsor">
+                        <img src="~/images/sponsors/@row.SponsorLogo" alt="@row.SponsorLogo">
+                    </span>
+                    <img src="@sadImg" alt="@row.Name" class="dog sad">
+                    <img src="@happyImg" alt="@row.Name" class="dog happy">
                     <h4>@row.Name</h4>
                     <p class="per-night per-night-@(row.CurrentClickCount / 20)">@row.CurrentClickCount out of @row.TargetClickCount</p>
-                    <p>Social interaction</p>
                     <a href="#" class="btn btn-default btn-green" onclick="feedDog(@row.DogId)">Feed now</a>
                 </div>
             </div>
@@ -32,19 +38,3 @@
 
     </div>
 </div>
-
-<script>
-    function feedDog(dogid)
-    {
-        $.ajax({
-            type: "POST",
-            url: "/Doge/FeedDoge?dogid=" + dogid,
-            data: null,
-            success: function () {
-                debugger;
-             }
-        });
-
-    }
-
-</script>
