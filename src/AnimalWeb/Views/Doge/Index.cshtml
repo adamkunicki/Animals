@@ -29,8 +29,8 @@
                     <img src="@sadImg" alt="@row.Name" class="dog sad">
                     <img src="@happyImg" alt="@row.Name" class="dog happy">
                     <h4>@row.Name</h4>
-                    <p id="count-@row.DogId" class="per-night per-night-@(row.CurrentClickCount / 20)">@row.CurrentClickCount out of @row.TargetClickCount</p>
-                    <a class="btn btn-default btn-green" onclick="feedDog(@row.DogId)">Feed now</a>
+                    <p class="per-night per-night-@(row.CurrentClickCount / 20)">@row.CurrentClickCount out of @row.TargetClickCount</p>
+                    <a href="#" class="btn btn-default btn-green feed feed-@(row.CurrentClickCount)" data-id="@row.DogId">Feed now</a>
                 </div>
             </div>
             </text>
@@ -39,19 +39,34 @@
     </div>
 </div>
 
-<script>
-    function feedDog(dogid)
-    {
-        $.ajax({
-            type: "POST",
-            url: "/Doge/FeedDoge?dogid=" + dogid,
-            data: null,
-            success: function (data) {
-                var p = $("#count-" + data.DogId);
-                p.html("" + data.CurrentClickCount + " out of " + data.TargetClickCount);
-            }
+@section scripts {
+    <script type="text/javascript">
+        $(function () {
+            $(".costs .feed").click(function () {
+                var dogId = $(this).attr('data-id');
+
+                $.ajax({
+                    type: "POST",
+                    url: "/Doge/FeedDoge?dogid=" + dogId,
+                    data: null,
+                    success: function (data) {
+                        var p = $("#count-" + data.DogId);
+                        p.html("" + data.CurrentClickCount + " out of " + data.TargetClickCount);
+                    }
+                });
+            });
+
+            $(".costs .feed").hover(
+                function () {
+                    var img = $('img.dog.happy', this.parentNode);
+                    img.css('opacity', '1.0')
+                },
+                function () {
+                    var img = $('img.dog.happy', this.parentNode);
+                    img.css('opacity', '0.0')
+                }
+            );
+
         });
-
-    }
-
-</script>
+    </script>
+}
