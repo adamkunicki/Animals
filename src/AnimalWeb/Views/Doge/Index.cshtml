@@ -20,10 +20,10 @@
             <text>
             <div class="col-md-4 costs">
                 <div data-stellar-ratio="1.2" data-stellar-vertical-offset="150" data-stellar-horizontal-offset="0" style="top: auto;">
-                    <img src="~/images/dogs/@row.SadImg" alt="@row.Name">
+                    <img src="~/images/dogs/@(row.Name)_2.png" alt="@row.Name" class="dog">
                     <h4>@row.Name</h4>
                     <p class="per-night per-night-@(row.CurrentClickCount / 20)">@row.CurrentClickCount out of @row.TargetClickCount</p>
-                    <p>Social interaction</p>
+                    <p><img src="~/images/sponsors/@row.SponsorLogo" alt="@row.SponsorLogo" class="sponsor"></p>
                     <a href="#" class="btn btn-default btn-green">Feed now</a>
                 </div>
             </div>
