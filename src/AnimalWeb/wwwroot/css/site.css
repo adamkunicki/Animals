@@ -1960,5 +1960,112 @@ img {
 }
 
 .feed {
-    background: url(../images/micha/micha_005.png) no-repeat top center;
+    background: url(../images/micha/micha_005.png) no-repeat center 7px;
+    padding-top: 36px;
 }
+
+.feed:hover {
+    background-image: url(../images/micha/micha_100.png) !important;
+}
+
+.feed.feed-0 { background-image: url(../images/micha/micha_005.png); }
+.feed.feed-1 { background-image: url(../images/micha/micha_005.png); }
+.feed.feed-2 { background-image: url(../images/micha/micha_005.png); }
+.feed.feed-3 { background-image: url(../images/micha/micha_005.png); }
+.feed.feed-4 { background-image: url(../images/micha/micha_005.png); }
+.feed.feed-5 { background-image: url(../images/micha/micha_005.png); }
+.feed.feed-6 { background-image: url(../images/micha/micha_010.png); }
+.feed.feed-7 { background-image: url(../images/micha/micha_010.png); }
+.feed.feed-8 { background-image: url(../images/micha/micha_010.png); }
+.feed.feed-9 { background-image: url(../images/micha/micha_010.png); }
+.feed.feed-10 { background-image: url(../images/micha/micha_010.png); }
+.feed.feed-11 { background-image: url(../images/micha/micha_015.png); }
+.feed.feed-12 { background-image: url(../images/micha/micha_015.png); }
+.feed.feed-13 { background-image: url(../images/micha/micha_015.png); }
+.feed.feed-14 { background-image: url(../images/micha/micha_015.png); }
+.feed.feed-15 { background-image: url(../images/micha/micha_015.png); }
+.feed.feed-16 { background-image: url(../images/micha/micha_020.png); }
+.feed.feed-17 { background-image: url(../images/micha/micha_020.png); }
+.feed.feed-18 { background-image: url(../images/micha/micha_020.png); }
+.feed.feed-19 { background-image: url(../images/micha/micha_020.png); }
+.feed.feed-20 { background-image: url(../images/micha/micha_020.png); }
+.feed.feed-21 { background-image: url(../images/micha/micha_025.png); }
+.feed.feed-22 { background-image: url(../images/micha/micha_025.png); }
+.feed.feed-23 { background-image: url(../images/micha/micha_025.png); }
+.feed.feed-24 { background-image: url(../images/micha/micha_025.png); }
+.feed.feed-25 { background-image: url(../images/micha/micha_025.png); }
+.feed.feed-26 { background-image: url(../images/micha/micha_030.png); }
+.feed.feed-27 { background-image: url(../images/micha/micha_030.png); }
+.feed.feed-28 { background-image: url(../images/micha/micha_030.png); }
+.feed.feed-29 { background-image: url(../images/micha/micha_030.png); }
+.feed.feed-30 { background-image: url(../images/micha/micha_030.png); }
+.feed.feed-31 { background-image: url(../images/micha/micha_035.png); }
+.feed.feed-32 { background-image: url(../images/micha/micha_035.png); }
+.feed.feed-33 { background-image: url(../images/micha/micha_035.png); }
+.feed.feed-34 { background-image: url(../images/micha/micha_035.png); }
+.feed.feed-35 { background-image: url(../images/micha/micha_035.png); }
+.feed.feed-36 { background-image: url(../images/micha/micha_040.png); }
+.feed.feed-37 { background-image: url(../images/micha/micha_040.png); }
+.feed.feed-38 { background-image: url(../images/micha/micha_040.png); }
+.feed.feed-39 { background-image: url(../images/micha/micha_040.png); }
+.feed.feed-40 { background-image: url(../images/micha/micha_040.png); }
+.feed.feed-41 { background-image: url(../images/micha/micha_045.png); }
+.feed.feed-42 { background-image: url(../images/micha/micha_045.png); }
+.feed.feed-43 { background-image: url(../images/micha/micha_045.png); }
+.feed.feed-44 { background-image: url(../images/micha/micha_045.png); }
+.feed.feed-45 { background-image: url(../images/micha/micha_045.png); }
+.feed.feed-46 { background-image: url(../images/micha/micha_050.png); }
+.feed.feed-47 { background-image: url(../images/micha/micha_050.png); }
+.feed.feed-48 { background-image: url(../images/micha/micha_050.png); }
+.feed.feed-49 { background-image: url(../images/micha/micha_050.png); }
+.feed.feed-50 { background-image: url(../images/micha/micha_050.png); }
+.feed.feed-51 { background-image: url(../images/micha/micha_055.png); }
+.feed.feed-52 { background-image: url(../images/micha/micha_055.png); }
+.feed.feed-53 { background-image: url(../images/micha/micha_055.png); }
+.feed.feed-54 { background-image: url(../images/micha/micha_055.png); }
+.feed.feed-55 { background-image: url(../images/micha/micha_055.png); }
+.feed.feed-56 { background-image: url(../images/micha/micha_060.png); }
+.feed.feed-57 { background-image: url(../images/micha/micha_060.png); }
+.feed.feed-58 { background-image: url(../images/micha/micha_060.png); }
+.feed.feed-59 { background-image: url(../images/micha/micha_060.png); }
+.feed.feed-60 { background-image: url(../images/micha/micha_060.png); }
+.feed.feed-61 { background-image: url(../images/micha/micha_065.png); }
+.feed.feed-62 { background-image: url(../images/micha/micha_065.png); }
+.feed.feed-63 { background-image: url(../images/micha/micha_065.png); }
+.feed.feed-64 { background-image: url(../images/micha/micha_065.png); }
+.feed.feed-65 { background-image: url(../images/micha/micha_065.png); }
+.feed.feed-66 { background-image: url(../images/micha/micha_070.png); }
+.feed.feed-67 { background-image: url(../images/micha/micha_070.png); }
+.feed.feed-68 { background-image: url(../images/micha/micha_070.png); }
+.feed.feed-69 { background-image: url(../images/micha/micha_070.png); }
+.feed.feed-70 { background-image: url(../images/micha/micha_070.png); }
+.feed.feed-71 { background-image: url(../images/micha/micha_075.png); }
+.feed.feed-72 { background-image: url(../images/micha/micha_075.png); }
+.feed.feed-73 { background-image: url(../images/micha/micha_075.png); }
+.feed.feed-74 { background-image: url(../images/micha/micha_075.png); }
+.feed.feed-75 { background-image: url(../images/micha/micha_075.png); }
+.feed.feed-76 { background-image: url(../images/micha/micha_080.png); }
+.feed.feed-77 { background-image: url(../images/micha/micha_080.png); }
+.feed.feed-78 { background-image: url(../images/micha/micha_080.png); }
+.feed.feed-79 { background-image: url(../images/micha/micha_080.png); }
+.feed.feed-80 { background-image: url(../images/micha/micha_080.png); }
+.feed.feed-81 { background-image: url(../images/micha/micha_085.png); }
+.feed.feed-82 { background-image: url(../images/micha/micha_085.png); }
+.feed.feed-83 { background-image: url(../images/micha/micha_085.png); }
+.feed.feed-84 { background-image: url(../images/micha/micha_085.png); }
+.feed.feed-85 { background-image: url(../images/micha/micha_085.png); }
+.feed.feed-86 { background-image: url(../images/micha/micha_090.png); }
+.feed.feed-87 { background-image: url(../images/micha/micha_090.png); }
+.feed.feed-88 { background-image: url(../images/micha/micha_090.png); }
+.feed.feed-89 { background-image: url(../images/micha/micha_090.png); }
+.feed.feed-90 { background-image: url(../images/micha/micha_090.png); }
+.feed.feed-91 { background-image: url(../images/micha/micha_095.png); }
+.feed.feed-92 { background-image: url(../images/micha/micha_095.png); }
+.feed.feed-93 { background-image: url(../images/micha/micha_095.png); }
+.feed.feed-94 { background-image: url(../images/micha/micha_095.png); }
+.feed.feed-95 { background-image: url(../images/micha/micha_095.png); }
+.feed.feed-96 { background-image: url(../images/micha/micha_100.png); }
+.feed.feed-97 { background-image: url(../images/micha/micha_100.png); }
+.feed.feed-98 { background-image: url(../images/micha/micha_100.png); }
+.feed.feed-99 { background-image: url(../images/micha/micha_100.png); }
+.feed.feed-100 { background-image: url(../images/micha/micha_100.png); }
