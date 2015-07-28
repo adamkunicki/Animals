@@ -23,5 +23,34 @@ namespace AnimalWeb.Controllers
 
             return View(model);
         }
+
+        [HttpPost]
+        public JsonResult FeedDoge(int dogId)
+        {
+            try
+            {
+                var dog = this.context.Dogs.FirstOrDefault(d => d.DogId == dogId);
+                if (dog == null)
+                {
+                    return new JsonResult(null);
+                }
+
+                dog.CurrentClickCount++;
+                if (dog.CurrentClickCount >= dog.TargetClickCount)
+                {
+                    dog.Bowls.Add(new Bowl() { DogId = dog.DogId, ClickCount = dog.CurrentClickCount, Date = DateTime.Now });
+                    dog.CurrentClickCount = 0;
+                }
+
+                this.context.SaveChanges();
+
+                return Json(dog);
+            }
+            catch(Exception ex)
+            {
+                return new JsonResult(null);
+            }
+            
+        }
     }
 }

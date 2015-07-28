@@ -25,10 +25,8 @@ namespace Animal.Db
 
         public int CurrentClickCount { get; set; }
 
-        [Required]
         public string SadImg { get; set; }
 
-        [Required]
         public string HappyImg { get; set; }
 
         [Required]

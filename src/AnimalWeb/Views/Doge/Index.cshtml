@@ -24,7 +24,7 @@
                     <h4>@row.Name</h4>
                     <p class="per-night per-night-@(row.CurrentClickCount / 20)">@row.CurrentClickCount out of @row.TargetClickCount</p>
                     <p>Social interaction</p>
-                    <a href="#" class="btn btn-default btn-green">Feed now</a>
+                    <a href="#" class="btn btn-default btn-green" onclick="feedDog(@row.DogId)">Feed now</a>
                 </div>
             </div>
             </text>
@@ -32,3 +32,19 @@
 
     </div>
 </div>
+
+<script>
+    function feedDog(dogid)
+    {
+        $.ajax({
+            type: "POST",
+            url: "/Doge/FeedDoge?dogid=" + dogid,
+            data: null,
+            success: function () {
+                debugger;
+             }
+        });
+
+    }
+
+</script>
