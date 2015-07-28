@@ -1,1 +1,7 @@
-{}
+{
+  "Data": {
+    "AnimalModel": {
+      "Connectionstring": "data source=192.168.10.130;initial catalog=AnimalDb;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"
+    }
+  }
+}

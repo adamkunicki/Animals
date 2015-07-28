@@ -14,6 +14,8 @@ using Microsoft.Framework.Logging.Console;
 using Microsoft.Framework.Runtime;
 using Animal.Db;
 
+
+
 namespace AnimalWeb
 {
     public class Startup
@@ -25,6 +27,7 @@ namespace AnimalWeb
                 .AddJsonFile("config.json")
                 .AddEnvironmentVariables();
             Configuration = builder.Build();
+         
         }
 
         public IConfiguration Configuration { get; set; }
@@ -32,7 +35,8 @@ namespace AnimalWeb
         // This method gets called by the runtime.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped(typeof(AnimalModel), typeof(AnimalModel));
+            string connectionString = Configuration.Get("Data:AnimalModel:Connectionstring");
+            services.AddScoped(typeof(AnimalModel), (service) => new AnimalModel(connectionString));
             // Add MVC services to the services container.
             services.AddMvc();
             // Uncomment the following line to add Web API services which makes it easier to port Web API 2 controllers.

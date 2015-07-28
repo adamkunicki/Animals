@@ -12,6 +12,11 @@ namespace Animal.Db
         {
         }
 
+        public AnimalModel(string connectionString)
+            : base(connectionString)
+        {
+        }
+
         public virtual DbSet<Bowl> Bowls { get; set; }
         public virtual DbSet<Dog> Dogs { get; set; }
 
