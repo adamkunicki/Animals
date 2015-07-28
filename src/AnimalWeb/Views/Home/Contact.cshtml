@@ -1,17 +1,83 @@
 ﻿@{
     ViewData["Title"] = "Contact";
 }
-<h2>@ViewData["Title"].</h2>
-<h3>@ViewData["Message"]</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+<!-- Contact -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 centered">
+            <h3><span>Contact us</span></h3>
+            <p>If you want to help us or give us some feedback, feel free to contact us.</p>
+        </div>
+    </div>
+</div>
+<!-- Contact end -->
+<!-- Map -->
+<div id="map"></div>
+<!-- Map end -->
+<!-- Content -->
+<div class="container content">
+    <div class="row">
+        <div class="col-md-8">
+            <form role="form" id="contact_form">
+                <div class="form-group">
+                    <label for="InputName">Your name</label>
+                    <input type="text" class="form-control" id="InputName" placeholder="Your name">
+                </div>
+                <div class="form-group">
+                    <label for="InputEmail">Your email</label>
+                    <input type="email" class="form-control" id="InputEmail" placeholder="Your email">
+                </div>
+                <div class="form-group">
+                    <label for="InputMesaagel">Your messsage</label>
+                    <textarea class="form-control" id="Message" placeholder="Your message" rows="8"></textarea>
+                </div>
+                <button type="submit" class="btn btn-default btn-green">Send message</button>
+            </form>
+        </div>
+        <div class="col-md-4">
+            <ul class="contact-info">
+                <li class="telephone">
+                    +48 123 456 789
+                </li>
+                <li class="address">
+                    Armii Krajowej 28, Cracow, PL
+                </li>
+                <li class="mail">
+                    contact@feedthedoge.pl
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row"><div class="col-md-4"><p></p></div></div>
+</div>
+<!-- Content end -->
 
-<address>
-    <strong>Support:</strong> <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+@section scripts {
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script src="~/lib/gmap3/dist/gmap3.js"></script>
+
+    <script type="text/javascript">
+        $("#map").gmap3({
+            map: {
+                options: {
+                    zoom: 16,
+                    center: [50.0717, 19.8931],
+                    mapTypeId: google.maps.MapTypeId.MAP,
+                    mapTypeControl: false,
+                    mapTypeControlOptions: { style: google.maps.MapTypeControlStyle.DROPDOWN_MENU },
+                    navigationControl: false,
+                    scrollwheel: false,
+                    streetViewControl: false
+                }
+            },
+            marker: {
+                latLng: [50.0717, 19.8931],
+                options: {
+                    icon: new google.maps.MarkerImage("/images/map-pin.png", new google.maps.Size(223, 167, "px", "px"))
+                }
+            }
+        });
+    </script>
+}
