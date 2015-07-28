@@ -870,6 +870,26 @@ img {
 	font-weight: 700;
 }
 
+.prices .costs div p.per-night.per-night-1 {
+	font-size: 110%;
+}
+
+.prices .costs div p.per-night.per-night-2 {
+	font-size: 120%;
+}
+
+.prices .costs div p.per-night.per-night-3 {
+	font-size: 130%;
+}
+
+.prices .costs div p.per-night.per-night-4 {
+	font-size: 140%;
+}
+
+.prices .costs div p.per-night.per-night-5 {
+	font-size: 150%;
+}
+
 .prices .costs div form {
 	margin: 20px 20px 0 20px;
 	box-sizing: border-box;
@@ -1859,3 +1879,50 @@ img {
 	
 }
   
+/* THANKS */
+
+#services .dog {
+	position: relative;
+	-webkit-animation: FadeIn 1.5s normal; /* Safari 4+ */
+	-moz-animation:    FadeIn 1.5s normal; /* Fx 5+ */
+	-o-animation:      FadeIn 1.5s normal; /* Opera 12+ */
+	animation:         FadeIn 1.5s normal; /* IE 10+ */
+}
+
+#services .dog div {
+	background: #fff;
+	position: relative;
+	text-align: center;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	left: 0 !important;
+	padding-bottom: 20px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+
+#services .dog span {
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	overflow: hidden;
+	display: inline-block;
+	height: 129.5px;
+    margin-bottom: 30px;
+	width: 129.5px;
+	border: 3px solid #ddd;
+	background: #65c178;
+	transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+    text-align: center;
+}
+
+#services .dog span img {
+	transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+}
+

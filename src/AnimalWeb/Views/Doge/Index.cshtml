@@ -1,0 +1,34 @@
+﻿@model Animal.Db.Dog[]
+@{
+    ViewData["Title"] = "Feed your doge";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 centered">
+            <h3><span>Here are our doggies</span></h3>
+            <p>Please help them.</p>
+        </div>
+    </div>
+</div>
+
+<div class="prices" data-stellar-background-ratio=".3" style="background-position: 0px 0px;">
+    <div class="container">
+
+        @foreach (var row in this.Model)
+        {
+            <text>
+            <div class="col-md-4 costs">
+                <div data-stellar-ratio="1.2" data-stellar-vertical-offset="150" data-stellar-horizontal-offset="0" style="top: auto;">
+                    <img src="~/images/dogs/@row.SadImg" alt="@row.Name">
+                    <h4>@row.Name</h4>
+                    <p class="per-night per-night-@(row.CurrentClickCount / 20)">@row.CurrentClickCount out of @row.TargetClickCount</p>
+                    <p>Social interaction</p>
+                    <a href="#" class="btn btn-default btn-green">Feed now</a>
+                </div>
+            </div>
+            </text>
+        }
+
+    </div>
+</div>
