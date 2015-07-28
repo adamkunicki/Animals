@@ -1,6 +1,4 @@
 ﻿/// <autosync enabled="true" />
-/// <reference path="lib/jquery-validation/test/test.js" />
-/// <reference path="lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js" />
 /// <reference path="../gulpfile.js" />
 /// <reference path="js/site.js" />
 /// <reference path="lib/bootstrap/assets/js/application.js" />
