@@ -38,3 +38,18 @@
 
     </div>
 </div>
+
+<script>
+    function feedDog(dogid)
+    {
+        $.ajax({
+            type: "POST",
+            url: "/Doge/FeedDoge?dogid=" + dogid,
+            data: null,
+            success: function () {
+             }
+        });
+
+    }
+
+</script>
