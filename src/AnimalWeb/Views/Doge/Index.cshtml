@@ -30,7 +30,7 @@
                     <img src="@happyImg" alt="@row.Name" class="dog happy">
                     <h4>@row.Name</h4>
                     <p class="per-night per-night-@(row.CurrentClickCount / 20)">@row.CurrentClickCount out of @row.TargetClickCount</p>
-                    <a href="#" class="btn btn-default btn-green feed">Feed now</a>
+                    <a href="#" class="btn btn-default btn-green" onclick="feedDog(@row.DogId)">Feed now</a>
                 </div>
             </div>
             </text>
@@ -39,20 +39,17 @@
     </div>
 </div>
 
-@section scripts {
-    <script type="text/javascript">
-        $(function () {
-            $(".costs .feed").hover(
-                function () {
-                    var img = $('img.dog.happy', this.parentNode);
-                    img.css('opacity', '1.0')
-                },
-                function () {
-                    var img = $('img.dog.happy', this.parentNode);
-                    img.css('opacity', '0.0')
-                }
-            );
-
+<script>
+    function feedDog(dogid)
+    {
+        $.ajax({
+            type: "POST",
+            url: "/Doge/FeedDoge?dogid=" + dogid,
+            data: null,
+            success: function () {
+             }
         });
-    </script>
-}
+
+    }
+
+</script>
