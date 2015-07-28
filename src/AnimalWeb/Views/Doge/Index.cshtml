@@ -19,12 +19,16 @@
         {
             var sadImg = string.Format("/images/dogs/{0}_2.png", row.Name);
             var happyImg = string.Format("/images/dogs/{0}_1.png", row.Name);
+            var prc = 100 * row.CurrentClickCount / row.TargetClickCount;
 
             <text>
             <div class="col-md-4 costs">
                 <div>
                     <span class="sponsor">
                         <img src="~/images/sponsors/@row.SponsorLogo" alt="@row.SponsorLogo">
+                    </span>
+                    <span class="micha">
+                        <img src="~/images/micha/micha_100.png" alt=""><br /><span>@(row.Bowls.Count)</span>
                     </span>
                     <img src="@sadImg" alt="@row.Name" class="dog sad">
                     <img src="@happyImg" alt="@row.Name" class="dog happy">
@@ -43,13 +47,23 @@
     <script type="text/javascript">
         $(function () {
             $(".costs .feed").click(function () {
+                var that = $(this);
+                var count = $('.per-night', this.parentNode);
                 var dogId = $(this).attr('data-id');
+                var bowls = $('.micha span', this.parentNode);
 
                 $.ajax({
                     type: "POST",
                     url: "/Doge/FeedDoge?dogid=" + dogId,
                     data: null,
-                    success: function () {
+                    success: function (data) {
+                        count.html("" + data.CurrentClickCount + " out of " + data.TargetClickCount);
+                        for (var i = 0; i <= 100; ++i) { that.removeClass('feed-' + i); }
+                        that.removeClass(function () { /* Matches even table-col-row */
+                            return this.className.split(' ').filter(function (className) { return className.match(/feed-\d{1,3}/) }).join(' ');
+                        });
+                        that.addClass('feed-' + (100 * data.CurrentClickCount / data.TargetClickCount));
+                        bowls.html(data.Bowls);
                     }
                 });
 

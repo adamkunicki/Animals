@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
 using System.Diagnostics;
 using Animal.Db;
+using AnimalWeb.Db;
 
 namespace AnimalWeb.Controllers
 {
@@ -44,7 +45,18 @@ namespace AnimalWeb.Controllers
 
                 this.context.SaveChanges();
 
-                return Json(dog);
+                return Json(new DogDto
+                {
+                    Bowls = dog.Bowls.Count,
+                    CurrentClickCount = dog.CurrentClickCount,
+                    Description = dog.Description,
+                    DogId = dog.DogId,
+                    HappyImg = dog.HappyImg,
+                    Name = dog.Name,
+                    SadImg = dog.SadImg,
+                    SponsorLogo = dog.SponsorLogo,
+                    TargetClickCount = dog.TargetClickCount
+                });
             }
             catch(Exception ex)
             {

@@ -861,6 +861,27 @@ img {
     max-width: 120px;
 }
 
+.prices .costs div .micha {
+    background-color: #fff;
+    border-radius: 5px;
+    max-height: 90px;
+    max-width: 120px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 10;
+}
+
+.prices .costs div .micha span {
+    font-size: 125%;
+    margin-left: 3px;
+}
+
+.prices .costs div .micha img {
+    max-height: 90px;
+    max-width: 120px;
+}
+
 .prices .costs div img.dog {
 	display: inline-block;
     width: 240px;
