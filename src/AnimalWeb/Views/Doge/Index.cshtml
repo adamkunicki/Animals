@@ -29,8 +29,8 @@
                     <img src="@sadImg" alt="@row.Name" class="dog sad">
                     <img src="@happyImg" alt="@row.Name" class="dog happy">
                     <h4>@row.Name</h4>
-                    <p class="per-night per-night-@(row.CurrentClickCount / 20)">@row.CurrentClickCount out of @row.TargetClickCount</p>
-                    <a href="#" class="btn btn-default btn-green" onclick="feedDog(@row.DogId)">Feed now</a>
+                    <p id="count-@row.DogId" class="per-night per-night-@(row.CurrentClickCount / 20)">@row.CurrentClickCount out of @row.TargetClickCount</p>
+                    <a class="btn btn-default btn-green" onclick="feedDog(@row.DogId)">Feed now</a>
                 </div>
             </div>
             </text>
@@ -46,8 +46,10 @@
             type: "POST",
             url: "/Doge/FeedDoge?dogid=" + dogid,
             data: null,
-            success: function () {
-             }
+            success: function (data) {
+                var p = $("#count-" + data.DogId);
+                p.html("" + data.CurrentClickCount + " out of " + data.TargetClickCount);
+            }
         });
 
     }
