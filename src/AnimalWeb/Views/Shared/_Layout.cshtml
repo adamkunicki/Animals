@@ -49,11 +49,11 @@
                         <li @if (@Url.Action("Index", "Home") == currentUrl) { <text>class="active"</text> }>
                             <a href="@Url.Action("Index", "Home")" title="Home"><span data-hover="Home">Home</span></a>
                         </li>
-                        <li @if (@Url.Action("About", "Home") == currentUrl) { <text> class="active" </text>  }>
-                            <a href="@Url.Action("About", "Home")" title="About us"><span data-hover="About us">About us</span></a>
+                        <li @if (@Url.Action("Index", "Doge") == currentUrl) { <text> class="active" </text>  }>
+                            <a href="@Url.Action("Index", "Doge")" title="Feed your doge"><span data-hover="Feed your doge">Feed your doge</span></a>
                         </li>
-                        <li @if (@Url.Action("List", "Doge") == currentUrl) { <text> class="active" </text>  }>
-                            <a href="@Url.Action("List", "Doge")" title="Feed your doge"><span data-hover="Feed your doge">Feed your doge</span></a>
+                        <li @if (@Url.Action("About", "Home") == currentUrl) { <text> class="active" </text>   }>
+                            <a href="@Url.Action("About", "Home")" title="About us"><span data-hover="About us">About us</span></a>
                         </li>
                         <li @if (@Url.Action("Contact", "Home") == currentUrl) { <text> class="active" </text>   }>
                             <a href="@Url.Action("Contact", "Home")" title="Contact us" @if (@Url.Action("Contact", "Home") == currentUrl) { <text> class="active" </text>  }><span data-hover="Contact us">Contact us</span></a>
@@ -73,12 +73,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-offset-3 col-md-3 contact-info">
-                        <p class="social">
+                        <p class="social text-center">
                             <a href="http://www.klevermedia.co.uk/assets/petcare/index.html#" class="facebook"></a> <a href="http://www.klevermedia.co.uk/assets/petcare/index.html#" class="pinterest"></a> <a href="http://www.klevermedia.co.uk/assets/petcare/index.html#" class="twitter"></a>
                         </p>
                     </div>
                     <div class="col-md-3 contact-info">
-                        <p class="c-details">
+                        <p class="c-details text-center">
                             <span>Mail</span> <a href="#" title="">contact@feedthedoge.pl</a><br>
                             <span>Tel</span> +48 123 456 789
                         </p>
@@ -86,7 +86,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12 copyright">
-                        <p>© Copyright 2014. All rights reserved. <a href="#" title="FeedTheDoog">FeedTheDoge</a></p>
+                        <p class="text-center">© Copyright 2014. All rights reserved. <a href="#" title="FeedTheDoog">FeedTheDoge</a></p>
                     </div>
                 </div>
             </div>

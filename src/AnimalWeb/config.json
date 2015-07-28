@@ -1,7 +1,7 @@
 {
   "Data": {
     "AnimalModel": {
-      "Connectionstring": "data source=192.168.10.130;initial catalog=AnimalDb;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"
+      "Connectionstring": "data source=192.168.10.130;initial catalog=AnimalDb;integrated security=False;User Id=sql_booking;Password=booking123;MultipleActiveResultSets=True;App=EntityFramework"
     }
   }
 }
