@@ -1959,3 +1959,6 @@ img {
 	-moz-transition: all 0.5s ease;
 }
 
+.feed {
+    background: url(../images/micha/micha_005.png) no-repeat top center;
+}
