@@ -16,16 +16,16 @@ namespace AnimalWeb.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
-
             return View();
         }
 
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Your contact page.";
-            Console.WriteLine("Contact to cosole...");
-            Trace.TraceInformation("Contact info trace");
+            return View();
+        }
+
+        public IActionResult Diet()
+        {
             return View();
         }
 

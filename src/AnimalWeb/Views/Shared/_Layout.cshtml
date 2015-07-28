@@ -52,6 +52,9 @@
                         <li @if (@Url.Action("Index", "Doge") == currentUrl) { <text> class="active" </text>  }>
                             <a href="@Url.Action("Index", "Doge")" title="Feed your doge"><span data-hover="Feed your doge">Feed your doge</span></a>
                         </li>
+                        <li @if (@Url.Action("Diet", "Home") == currentUrl) { <text> class="active" </text>   }>
+                            <a href="@Url.Action("Diet", "Home")" title="Diet"><span data-hover="Diet">Diet</span></a>
+                        </li>
                         <li @if (@Url.Action("About", "Home") == currentUrl) { <text> class="active" </text>   }>
                             <a href="@Url.Action("About", "Home")" title="About us"><span data-hover="About us">About us</span></a>
                         </li>
