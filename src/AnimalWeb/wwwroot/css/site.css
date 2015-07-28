@@ -821,6 +821,7 @@ img {
 }
 
 .prices .costs {
+    margin-bottom: 10px;
 	position: relative;
 	-webkit-animation: FadeIn 1.5s normal; /* Safari 4+ */
 	-moz-animation:    FadeIn 1.5s normal; /* Fx 5+ */
@@ -840,13 +841,44 @@ img {
 	border-radius: 3px;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
+    position: relative;
 }
 
-.prices .costs div img {
-	position: absolute;
-	top: 10px;
-	margin-left: -25px;
-	left: 50%;
+.prices .costs div .sponsor {
+    background-color: #fff;
+    border-radius: 5px;
+    border: 3px solid #ddd;
+    max-height: 96px;
+    max-width: 126px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 10;
+}
+
+.prices .costs div .sponsor img {
+    max-height: 90px;
+    max-width: 120px;
+}
+
+.prices .costs div img.dog {
+	display: inline-block;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    border: 3px solid #ddd;
+    margin-top : 5px;
+    margin-bottom: -90px;
+}
+
+.prices .costs div img.dog.happy {
+	margin-top: -170px;
+	-webkit-transition: opacity 1.0s ease-in;
+    -moz-transition: opacity 1.0s ease-in;
+    -o-transition: opacity 1.0s ease-in;
+    -ms-transition: opacity 1.0s ease-in;
+    transition: opacity 1.0s ease-in;
+    opacity: 0;
 }
 
 .prices .costs div h4 {
@@ -868,6 +900,7 @@ img {
 .prices .costs div p.per-night {
 	color: #65c178;
 	font-weight: 700;
+    line-height: 32px;
 }
 
 .prices .costs div p.per-night.per-night-1 {

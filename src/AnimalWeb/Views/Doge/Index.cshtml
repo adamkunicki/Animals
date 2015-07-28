@@ -17,14 +17,20 @@
 
         @foreach (var row in this.Model)
         {
+            var sadImg = string.Format("/images/dogs/{0}_2.png", row.Name);
+            var happyImg = string.Format("/images/dogs/{0}_1.png", row.Name);
+
             <text>
             <div class="col-md-4 costs">
-                <div data-stellar-ratio="1.2" data-stellar-vertical-offset="150" data-stellar-horizontal-offset="0" style="top: auto;">
-                    <img src="~/images/dogs/@(row.Name)_2.png" alt="@row.Name" class="dog">
+                <div>
+                    <span class="sponsor">
+                        <img src="~/images/sponsors/@row.SponsorLogo" alt="@row.SponsorLogo">
+                    </span>
+                    <img src="@sadImg" alt="@row.Name" class="dog sad">
+                    <img src="@happyImg" alt="@row.Name" class="dog happy">
                     <h4>@row.Name</h4>
                     <p class="per-night per-night-@(row.CurrentClickCount / 20)">@row.CurrentClickCount out of @row.TargetClickCount</p>
-                    <p><img src="~/images/sponsors/@row.SponsorLogo" alt="@row.SponsorLogo" class="sponsor"></p>
-                    <a href="#" class="btn btn-default btn-green">Feed now</a>
+                    <a href="#" class="btn btn-default btn-green feed">Feed now</a>
                 </div>
             </div>
             </text>
@@ -32,3 +38,21 @@
 
     </div>
 </div>
+
+@section scripts {
+    <script type="text/javascript">
+        $(function () {
+            $(".costs .feed").hover(
+                function () {
+                    var img = $('img.dog.happy', this.parentNode);
+                    img.css('opacity', '1.0')
+                },
+                function () {
+                    var img = $('img.dog.happy', this.parentNode);
+                    img.css('opacity', '0.0')
+                }
+            );
+
+        });
+    </script>
+}
