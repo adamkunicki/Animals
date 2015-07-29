@@ -2,12 +2,13 @@
     "projects": [
         "src",
         "test",
-        "wrap"
+        "wrap",
+        "Libraries"
     ],
     "sdk": {
         "version": "1.0.0-beta5",
-        "runtime": "clr",
-        "architecture": "x86"
+        "runtime": "coreclr",
+        "architecture": "x64"
     },
     "sources": [
         "wrap\\"

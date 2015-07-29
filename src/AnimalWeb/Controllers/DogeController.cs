@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
-using System.Diagnostics;
 using Animal.Db;
 using AnimalWeb.Db;
 
@@ -58,7 +55,7 @@ namespace AnimalWeb.Controllers
                     TargetClickCount = dog.TargetClickCount
                 });
             }
-            catch(Exception ex)
+            catch (Exception)
             {
                 return new JsonResult(null);
             }

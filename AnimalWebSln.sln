@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "AnimalWeb", "src\AnimalWeb\AnimalWeb.xproj", "{00FC0A04-A0E7-43B3-A5F8-DC8E6A77B64C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{19EA7300-47AA-43F1-8F27-0FD6E57AB05D}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Core", "Libraries\Core\Core.xproj", "{CF28B169-76B5-4CF6-AD2E-99809BA973EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,11 +26,16 @@ Global
 		{00FC0A04-A0E7-43B3-A5F8-DC8E6A77B64C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00FC0A04-A0E7-43B3-A5F8-DC8E6A77B64C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00FC0A04-A0E7-43B3-A5F8-DC8E6A77B64C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF28B169-76B5-4CF6-AD2E-99809BA973EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF28B169-76B5-4CF6-AD2E-99809BA973EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF28B169-76B5-4CF6-AD2E-99809BA973EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF28B169-76B5-4CF6-AD2E-99809BA973EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{00FC0A04-A0E7-43B3-A5F8-DC8E6A77B64C} = {8AE65761-20DB-4008-ADBF-C2F9C5BD8997}
+		{CF28B169-76B5-4CF6-AD2E-99809BA973EC} = {19EA7300-47AA-43F1-8F27-0FD6E57AB05D}
 	EndGlobalSection
 EndGlobal
